@@ -1,0 +1,31 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.heading {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+}
+
+.notes-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.note-title{
+    margin-right: 20px;
+}
