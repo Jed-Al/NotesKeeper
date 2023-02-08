@@ -1,10 +1,11 @@
-import './App.css';
+import HomePage from '../screens/HomePage';
+// import './src/App.css';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
+      <HomePage/>
     </div>
   );
 }
 
-export default App;
