@@ -4,9 +4,30 @@
     width: 400px;
     height: 300px;
     border-radius: 12px;
-    background-color: aquamarine;
+    background-color: rgb(57, 167, 131);
 }
 
-/* .note-input{
-    
-} */
+.note{
+    background-color: rgb(57, 167, 131);
+    color: black;
+    border : none;
+}
+
+.note:focus-visible{
+    outline : none;
+}
+.note-input{
+    /* width : 380px; */
+    height: 280px;
+}
+
+::placeholder{
+    color : black;
+}
+
+.note-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

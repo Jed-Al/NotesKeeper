@@ -36,6 +36,12 @@ export default function HomePage() {
         setNotes(newNotes);
     }
 
+    const deleteNote = (title) => {
+        const newNotes = notes.filter((note) => note.title !== title);
+        setNotes(newNotes);
+        console.log(notes);
+    }
+
     return (
         <div className="home-page">
             <h1 className="heading">Notes Keeper</h1>
@@ -53,11 +59,11 @@ export default function HomePage() {
             </div >
             <div className="notes-list">
                 {notes.map((note) => (
-                    <Table title={note.title} content={note.content} date={note.date}></Table>
+                    <Table title={note.title} content={note.content} date={note.date} onDelete = {deleteNote}></Table>
                 ))
                 }
             </div>
-            <AddNote onSaveNote={(t, txt) => {saveNote(t, txt)}}></AddNote>
+            <AddNote onSaveNote={(t, txt) => { saveNote(t, txt) }}></AddNote>
         </div>
     );
 }
