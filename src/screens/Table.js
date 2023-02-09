@@ -12,7 +12,7 @@ export default function Table({ title, content, date, onDelete }) {
       </CardText>
       <div className="footer">
       <CardText>
-        <small className="text-muted">
+        <small>
           {date}
         </small>
       </CardText>
