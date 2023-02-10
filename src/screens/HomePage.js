@@ -6,23 +6,7 @@ import AddNote from './AddNote';
 
 export default function HomePage() {
 
-    const [notes, setNotes] = useState([
-        {
-            title: "First Dummy title",
-            content: "Dummy content",
-            date: "08/02/23"
-        },
-        {
-            title: "Second Dummy title",
-            content: "Dummy content",
-            date: "08/02/23"
-        },
-        {
-            title: "Third Dummy title",
-            content: "Dummy content",
-            date: "08/02/23"
-        }
-    ]);
+    const [notes, setNotes] = useState([]);
     const [query, setQuery] = useState("");
 
     const saveNote = (notetitle, text) => {
@@ -42,14 +26,21 @@ export default function HomePage() {
         console.log(notes);
     }
 
+    // const searchNote = (query) => {
+    //     const showNotes = notes.filter((note) => note.title == query);
+    //     setNotes(showNotes);
+    //     console.log(notes);
+    // }
+    
     return (
         <div className="home-page">
             <h1 className="heading">Notes Keeper</h1>
             <div className="search">
-                <Input placeholder="Search for your notes" />
+                <Input placeholder="Search for your notes"
+                onChange={e => setQuery(e.target.value)}
+                value={query} />
                 <Button
-                    onChange={e => setQuery(e.target.value)}
-                    value={query}
+                    // onClick={ (query) => searchNote(query)}
                 >Search</Button>
             </div>
             <div className="notes-section">
@@ -66,5 +57,5 @@ export default function HomePage() {
             <AddNote onSaveNote={(t, txt) => { saveNote(t, txt) }}></AddNote>
         </div>
     );
-}
+}                                                                                    
 
