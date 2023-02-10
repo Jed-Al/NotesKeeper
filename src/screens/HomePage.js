@@ -45,16 +45,16 @@ export default function HomePage() {
             </div>
             <div className="notes-section">
                 <h2 className="note-title">Notes</h2>
-                <Button>Create new Note</Button>
 
             </div >
             <div className="notes-list">
+            <AddNote onSaveNote={(t, txt) => { saveNote(t, txt) }}></AddNote>
                 {notes.map((note) => (
                     <Table title={note.title} content={note.content} date={note.date} onDelete = {deleteNote}></Table>
                 ))
                 }
             </div>
-            <AddNote onSaveNote={(t, txt) => { saveNote(t, txt) }}></AddNote>
+            
         </div>
     );
 }                                                                                    
